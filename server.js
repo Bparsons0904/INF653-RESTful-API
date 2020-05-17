@@ -5,7 +5,7 @@ const app = express();
 const mongoose = require('mongoose');
 
 var mongoose = require("mongoose");
-var MONGODB_URI = process.env.MONGODB_URL || "mongodb://<dbuser>:<dbpassword>@ds129050.mlab.com:29050/heroku_3gtc8qbb";
+var MONGODB_URI = process.env.MONGODB_URL || "mongodb://heroku_3gtc8qbb:heroku_3gtc8qbb@ds129050.mlab.com:29050/heroku_3gtc8qbb";
 
 const options = {
   useNewUrlParser: true,

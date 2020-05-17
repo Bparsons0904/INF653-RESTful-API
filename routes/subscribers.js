@@ -28,7 +28,6 @@ router.get('/', async (req, res) => {
   router.post('/', async (req, res) => {
     const subscriber = new Subscriber({
       name: req.body.name,
-      subscribedToChannel: req.body.subscribedToChannel
     })
     try {
       const newSubscriber = await subscriber.save();
@@ -42,9 +41,6 @@ router.get('/', async (req, res) => {
   router.patch('/:id', getSubscriber, async (req, res) => {
     if (req.body.name != null) {
       res.subscriber.name = req.body.name
-    }
-    if (req.body.subscribedToChannel != null) {
-      res.subscriber.subscribedToChannel = req.body.subscribedToChannel
     }
     try {
       const updatedSubscriber = await res.subscriber.save();

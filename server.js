@@ -12,6 +12,8 @@ const options = {
   useFindAndModify: false,
   family: 4 // Use IPv4, skip trying IPv6
 };
+
+mongoose.set('useUnifiedTopology', true);
 mongoose.connect(MONGODB_URI,options)
 const db = mongoose.connection;
 db.on('error', (error) => console.error(error));

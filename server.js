@@ -4,7 +4,6 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 
-var mongoose = require("mongoose");
 var MONGODB_URI = process.env.MONGODB_URL || "mongodb://heroku_3gtc8qbb:heroku_3gtc8qbb@ds129050.mlab.com:29050/heroku_3gtc8qbb";
 
 const options = {
@@ -23,4 +22,4 @@ app.use(express.json());
 const subscribersRouter = require('./routes/subscribers');
 app.use('/subscribers', subscribersRouter);
 
-app.listen(3000, () => console.log('Server Started'));
+// app.listen(3000, () => console.log('Server Started'));
